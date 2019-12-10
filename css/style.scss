@@ -19,6 +19,11 @@ $navHeight: 120px;
   100% { transform:translate(0,10px) rotate(45deg); opacity: 0; }
 }
 
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     background: darken($color: white, $amount: 1);
