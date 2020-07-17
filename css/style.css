@@ -308,6 +308,12 @@ body {
   padding-top: 120px;
 }
 
+@media screen and (max-width: 768px) {
+  .hero-main {
+    font-size: 0.85em;
+  }
+}
+
 .hero-main .hero {
   position: relative;
   z-index: 2;
@@ -336,6 +342,9 @@ body {
 }
 
 .hero-main .button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   font-size: 1.4em;
   border: 2px solid black;
   text-transform: uppercase;
@@ -359,6 +368,10 @@ body {
   text-shadow: 0 5px 10px #998800;
 }
 
+.cover-title.subtitle {
+  font-size: 2em;
+}
+
 @media screen and (max-width: 768px) {
   .cover-title {
     font-size: 3em;
@@ -377,21 +390,54 @@ body {
 }
 
 .social-media-list {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.social-media-list .social-media-item {
+  margin-right: 1em;
+}
+
+@media screen and (max-width: 768px) {
+  .social-media-list {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .social-media-list .social-media-item {
+    margin: 0 0.25em;
+  }
+}
+
+.skill-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-.social-media-item {
-  margin-right: 1em;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .skill-item {
   margin-bottom: 1.5em;
+  padding: 0 1em;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
 }
 
 .skill-item .title {
   margin-bottom: .5em;
+}
+
+.skill-item:hover > .skill-details {
+  max-width: 100%;
+}
+
+@media screen and (max-width: 720px) {
+  .skill-item {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
 }
 
 .skill-container {
@@ -415,6 +461,11 @@ body {
   -webkit-transition: width 1s;
   transition: width 1s;
   background: white;
+}
+
+.skill-details {
+  font-size: 0.85em;
+  padding-left: 6px;
 }
 
 .project-item {

@@ -262,6 +262,9 @@ body {
     height: 100vh;
     position: relative;
     padding-top: $navHeight;
+    @media screen and (max-width: 768px) {
+        font-size: 0.85em;
+    }
     .hero {
         position: relative;
         z-index: 2;
@@ -283,6 +286,7 @@ body {
     }
 
     .button {
+        display: inline-flex;
         font-size: 1.4em;
         border: 2px solid black;
         text-transform: uppercase;
@@ -304,6 +308,9 @@ body {
 .cover-title {
     font-size: 4em;
     font-weight: 700;
+    &.subtitle {
+      font-size: 2em;
+    }
     text-shadow: 0 5px 10px darken($primaryColor, 20);
     @media screen and (max-width: 768px) {
         font-size: 3em;
@@ -319,17 +326,37 @@ body {
 }
 
 .social-media-list {
-    display: flex;
-}
+    display: inline-flex;
+    .social-media-item {
+        margin-right: 1em;
+    }
 
-.social-media-item {
-    margin-right: 1em;
+    @media screen and (max-width: 768px) {
+        justify-content: center;
+        .social-media-item {
+          margin: 0 0.25em;
+        }
+    }
+}
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .skill-item {
     margin-bottom: 1.5em;
+    padding: 0 1em;
+    flex-basis: 50%;
     .title {
         margin-bottom: .5em;
+    }
+
+    &:hover > .skill-details {
+      max-width: 100%;
+    }
+
+    @media screen and (max-width: 720px) {
+      flex-basis: 100%;
     }
 }
 
@@ -348,6 +375,11 @@ body {
         transition: width 1s;
         background: white;
     }
+}
+
+.skill-details {
+  font-size: 0.85em;
+  padding-left: 6px;
 }
 
 .project-item {
