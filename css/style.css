@@ -51,6 +51,11 @@ body {
   }
 }
 
+a {
+  font-weight: 700;
+  color: #ffe200;
+}
+
 .has-text-main {
   color: #ffe200;
 }
@@ -160,8 +165,8 @@ body {
   font-weight: 600;
   text-transform: uppercase;
   color: white;
-  -webkit-transition: height 0.5s;
-  transition: height 0.5s;
+  -webkit-transition: height 0.3s;
+  transition: height 0.3s;
   position: absolute;
   left: 0;
   top: 0;
@@ -218,28 +223,28 @@ body {
 }
 
 .navbar.is-fixed .navbar-brand .navbar-item::after {
-  -webkit-transform: translate(235px, -10px) scale(0.05);
-          transform: translate(235px, -10px) scale(0.05);
+  -webkit-transform: translate(195px, -9px) scale(0.03);
+          transform: translate(195px, -9px) scale(0.03);
 }
 
 @media screen and (max-width: 1023px) {
   .navbar.is-fixed .navbar-brand .navbar-item::after {
-    -webkit-transform: translate(235px, -15px) scale(0.05);
-            transform: translate(235px, -15px) scale(0.05);
+    -webkit-transform: translate(195px, -15px) scale(0.03);
+            transform: translate(195px, -15px) scale(0.03);
   }
 }
 
 @media screen and (max-width: 768px) {
   .navbar.is-fixed .navbar-brand .navbar-item::after {
-    -webkit-transform: translate(191px, -18px) scale(0.05);
-            transform: translate(191px, -18px) scale(0.05);
+    -webkit-transform: translate(195px, -18px) scale(0.03);
+            transform: translate(195px, -18px) scale(0.03);
   }
 }
 
 @media screen and (max-width: 370px) {
   .navbar.is-fixed .navbar-brand .navbar-item::after {
-    -webkit-transform: translate(175px, -18px) scale(0.05);
-            transform: translate(175px, -18px) scale(0.05);
+    -webkit-transform: translate(179px, -18px) scale(0.03);
+            transform: translate(179px, -18px) scale(0.03);
   }
 }
 
@@ -302,6 +307,17 @@ body {
   height: 120px;
   border-radius: 50%;
   border: 4px solid #ffe200;
+}
+
+.navbar-title {
+  margin-bottom: 0;
+  font-size: 1.25rem;
+}
+
+.navbar-subtitle {
+  color: #ffe200;
+  font-size: 1rem;
+  display: inline;
 }
 
 .hero-main {
